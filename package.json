@@ -1,0 +1,49 @@
+{
+  "name": "p5.js-website-translator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Experimental web app to facilitate the p5.js website translation.",
+  "license": "MIT",
+  "homepage": "https://github.com/processing/p5.js-website-translator#readme",
+  "repository": "github:processing/p5.js-website-translator",
+  "bugs": {
+    "url": "https://github.com/processing/p5.js-website-translator/issues",
+    "email": "nomiyayukie@gmail.com"
+  },
+  "author": "Yukie Nomiya <nomiyayukie@gmail.com>",
+  "contributors": [
+    "Yukie Nomiya <nomiyayukie@gmail.com> (https://github.com/yukienomiya)"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint": "npm run lint:js && npm run lint:style"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "nuxt": "^2.13.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
