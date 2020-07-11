@@ -1,5 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
+const basePath =
+  process.env.DEPLOY_ENV === 'GH_PAGES' ? '/p5.js-website-translator/' : '/'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -27,7 +30,21 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
+  },
+  /*
+   ** Configures router settings
+   ** See https://nuxtjs.org/api/configuration-router
+   */
+  router: {
+    base: basePath,
+  },
+  /*
+   ** Configures pwa settings
+   ** See https://pwa.nuxtjs.org/modules/workbox.html#workbox-module
+   */
+  pwa: {
+    publicPath: basePath + '_nuxt/',
   },
   /*
    ** Global CSS
