@@ -25,7 +25,8 @@
     "serve": "nuxt serve",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-    "lint": "npm run lint:js && npm run lint:style"
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:fix": "npm run lint:js -- --fix && npm run lint:style -- --fix"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.20",
