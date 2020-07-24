@@ -29,8 +29,12 @@
     "lint:fix": "npm run lint:js -- --fix && npm run lint:style -- --fix"
   },
   "dependencies": {
+    "@nuxt/http": "^0.5.10",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nuxt": "^2.13.0"
+    "flat": "^5.0.0",
+    "nuxt": "^2.13.0",
+    "vue-virtual-scroller": "^1.0.10",
+    "yaml": "^1.10.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
