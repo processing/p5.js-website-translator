@@ -71,7 +71,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', '@nuxt/http'],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
