@@ -1,24 +1,24 @@
 <template>
   <v-layout column justify-center align-center>
-    <v-flex>
-      <textCard
-        v-for="(item, key) in data"
-        :key="key"
-        :str-key="key"
-        :original-str="item"
-      />
-    </v-flex>
+    <virtual-list
+      class="list"
+      style="height: 100vh; overflow-y: auto; width: 100%;"
+      :data-key="'strKey'"
+      :data-sources="data"
+      :data-component="item"
+      :estimate-size="50"
+      :keeps="50"
+    />
   </v-layout>
 </template>
 
 <script>
 import yaml from 'js-yaml'
 import flatten from 'flat'
+import VirtualList from 'vue-virtual-scroll-list'
 import textCard from '../components/textCard.vue'
 export default {
-  components: {
-    textCard,
-  },
+  components: { 'virtual-list': VirtualList },
   async fetch() {
     const yamlURL =
       'https://raw.githubusercontent.com/processing/p5.js-website/main/src/data/en.yml'
@@ -30,18 +30,26 @@ export default {
       throw error
       // TODO add dialog with error msg and reload button
     }
-    let data
+    let dataObj
     // eslint-disable-next-line no-useless-catch
     try {
-      data = yaml.safeLoad(dataYAML)
+      dataObj = yaml.safeLoad(dataYAML)
     } catch (error) {
       throw error
     }
-    this.data = flatten(data)
+    const data = []
+    const fObj = flatten(dataObj)
+    for (const key in fObj) {
+      const obj = { strKey: key, originalStr: fObj[key] }
+      data.push(obj)
+    }
+    this.data = data
   },
   data() {
     return {
-      data: {},
+      item: textCard,
+      data: [],
+      strKey: '',
     }
   },
   fetchOnServer: false,
