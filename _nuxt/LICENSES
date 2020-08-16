@@ -1,15 +1,8 @@
 /*!
-  * vue-router v3.3.4
+  * vue-router v3.4.3
   * (c) 2020 Evan You
   * @license MIT
   */
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
 
 /*!
  * The buffer module from node.js, for the browser.
@@ -34,6 +27,12 @@
  * vue-no-ssr v1.1.1
  * (c) 2018-present egoist <0x142857@gmail.com>
  * Released under the MIT License.
+ */
+
+/*!
+ * vue-virtual-scroll-list v2.3.1
+ * open source under the MIT license
+ * https://github.com/tangbc/vue-virtual-scroll-list#readme
  */
 
 /*!
