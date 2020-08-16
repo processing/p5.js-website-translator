@@ -33,7 +33,6 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "flat": "^5.0.0",
     "nuxt": "^2.13.0",
-    "vue-virtual-scroller": "^1.0.10",
     "yaml": "^1.10.0"
   },
   "devDependencies": {
@@ -49,6 +48,7 @@
     "prettier": "^2.0.5",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "vue-virtual-scroll-list": "^2.3.1"
   }
 }
