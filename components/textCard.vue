@@ -1,10 +1,10 @@
 <template>
   <div class="flex">
-    <v-card class="ma-2">
+    <v-card class="my-3" :elevation="1">
       <v-container>
         <v-row>
           <v-col cols="4" class="pa-0">
-            <v-card-title>{{ strKey }}</v-card-title>
+            <v-card-title>{{ source.strKey }}</v-card-title>
           </v-col>
           <v-col class="col-2 pa-0">
             <v-card-actions class="justify-end">
@@ -31,7 +31,7 @@
         </v-row>
         <v-row>
           <v-col cols="6">
-            <v-card-text class="pa-0">{{ originalStr }}</v-card-text>
+            <v-card-text class="pa-0">{{ source.originalStr }}</v-card-text>
           </v-col>
           <v-col cols="6">
             <v-textarea
@@ -50,13 +50,11 @@
 <script>
 export default {
   props: {
-    strKey: {
-      type: String,
-      default: '',
-    },
-    originalStr: {
-      type: String,
-      default: '',
+    source: {
+      type: Object,
+      default() {
+        return {}
+      },
     },
   },
 }
