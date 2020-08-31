@@ -3,7 +3,7 @@
     <tool-bar page="reference" @setLang="setLanguage($event)"></tool-bar>
     <virtual-list
       class="list"
-      style="height: 100vh; overflow-y: auto; width: 100%;"
+      style="height: 100vh; overflow-y: auto; width: 100%"
       :data-key="'strKey'"
       :data-sources="data"
       :data-component="item"
