@@ -65,14 +65,6 @@
       <v-toolbar-title style="width: 300px;" class="ml-0 pl-4">
         <span v-text="title"></span>
       </v-toolbar-title>
-      <v-text-field
-        flat
-        solo-inverted
-        hide-details
-        prepend-inner-icon="mdi-magnify"
-        label="Search"
-      ></v-text-field>
-      <v-spacer></v-spacer>
     </v-app-bar>
     <v-main>
       <v-container class="fill-height" fluid>
