@@ -1,0 +1,53 @@
+{
+  "name": "p5.js-website-translator",
+  "short_name": "p5.js-website-translator",
+  "description": "Experimental web app to facilitate the p5.js website translation.",
+  "icons": [
+    {
+      "src": "/p5.js-website-translator/_nuxt/icons/icon_64x64.4a93bc.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/p5.js-website-translator/_nuxt/icons/icon_120x120.4a93bc.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/p5.js-website-translator/_nuxt/icons/icon_144x144.4a93bc.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/p5.js-website-translator/_nuxt/icons/icon_152x152.4a93bc.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/p5.js-website-translator/_nuxt/icons/icon_192x192.4a93bc.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/p5.js-website-translator/_nuxt/icons/icon_384x384.4a93bc.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/p5.js-website-translator/_nuxt/icons/icon_512x512.4a93bc.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/p5.js-website-translator/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
