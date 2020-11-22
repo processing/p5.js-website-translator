@@ -6,7 +6,7 @@
 	*/
 
 /*!
-  * vue-router v3.4.6
+  * vue-router v3.4.9
   * (c) 2020 Evan You
   * @license MIT
   */
@@ -49,3 +49,5 @@
  */
 
 /*! MIT License © Sindre Sorhus */
+
+/*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
