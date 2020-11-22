@@ -4,9 +4,9 @@ const basePath =
 export default {
   /*
    ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
+   ** See https://nuxtjs.org/api/configuration-ssr
    */
-  mode: 'spa',
+  ssr: false,
   /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
