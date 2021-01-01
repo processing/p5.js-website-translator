@@ -1,6 +1,10 @@
 <template>
   <v-layout column justify-center align-center>
-    <tool-bar page="website" @setLang="setLanguage($event)"></tool-bar>
+    <tool-bar
+      page="website"
+      @setLang="setLanguage($event)"
+      @setFilter="setFilter($event)"
+    ></tool-bar>
     <virtual-list
       class="list"
       style="height: 100vh; overflow-y: auto; width: 100%"
@@ -114,6 +118,7 @@ export default {
     }
     this.data = actions.buildCardsData(
       this.language,
+      this.filterOption,
       'website',
       flattenedOriginalFile,
       flattenedTranslatedFile
@@ -125,11 +130,16 @@ export default {
       data: [],
       strKey: '',
       language: '',
+      filterOption: '',
     }
   },
   methods: {
     setLanguage(l) {
       this.language = l
+      this.$nuxt.refresh()
+    },
+    setFilter(f) {
+      this.filterOption = f
       this.$nuxt.refresh()
     },
   },
