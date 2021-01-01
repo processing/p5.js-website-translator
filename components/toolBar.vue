@@ -1,6 +1,6 @@
 <template>
   <v-row class="d-flex justify-space-between">
-    <v-col sm="5">
+    <v-col cols="6" md="4">
       <v-select
         v-model="language"
         label="Language"
@@ -11,23 +11,34 @@
       ></v-select>
     </v-col>
     <v-spacer></v-spacer>
-    <v-col sm="3">
+    <v-col cols="6" md="4">
+      <v-select
+        v-model="filterOption"
+        label="Filter"
+        outlined
+        dense
+        :items="filterOptions"
+        :disabled="isLanguageSet(language)"
+        @change="emitFilter"
+      ></v-select>
+    </v-col>
+    <v-col cols="6" md="2">
       <v-btn
         justified
         min-height="40"
-        :disabled="isRestoreDisable(language)"
+        :disabled="isLanguageSet(language)"
         @click="restoreFile()"
       >
         RESTORE
       </v-btn>
     </v-col>
-    <v-col sm="3">
+    <v-col cols="6" md="2">
       <v-btn
         class="white--text"
         color="green lighten-1"
         min-height="40"
         download
-        :disabled="isDownloadDisable(language)"
+        :disabled="isLanguageSet(language)"
         @click="downloadFile()"
       >
         DOWNLOAD
@@ -60,11 +71,16 @@ export default {
       language: '',
       originalFileSHA: '',
       translatedFileSHA: '',
+      filterOption: '',
+      filterOptions: ['All', 'Translated', 'To be translated'],
     }
   },
   methods: {
     emitLang(event) {
       this.$emit('setLang', this.language)
+    },
+    emitFilter(event) {
+      this.$emit('setFilter', this.filterOption)
     },
     async downloadFile() {
       const fileKey = `p5js-website-translator.files.${this.page}.${this.language}`
@@ -94,10 +110,7 @@ export default {
       this.originalFileSHA = originalFileObj.commitSHA
       this.translatedFileSHA = translatedFileObj.commitSHA
     },
-    isDownloadDisable(language) {
-      return language.length === 0
-    },
-    isRestoreDisable(language) {
+    isLanguageSet(language) {
       return language.length === 0
     },
   },

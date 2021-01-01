@@ -3,12 +3,22 @@ const flat = require('flat')
 
 function buildCardsData(
   lang,
+  filterOption,
   webpage,
   flattenedOriginalFile,
   flattenedTranslatedFile
 ) {
   const data = []
   for (const key in flattenedOriginalFile) {
+    if (filterOption === 'Translated') {
+      if (flattenedOriginalFile[key] === flattenedTranslatedFile[key]) {
+        continue
+      }
+    } else if (filterOption === 'To be translated') {
+      if (flattenedOriginalFile[key] !== flattenedTranslatedFile[key]) {
+        continue
+      }
+    }
     const obj = {
       page: webpage,
       language: lang,
